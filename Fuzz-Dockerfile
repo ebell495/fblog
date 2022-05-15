@@ -1,0 +1,7 @@
+FROM rust:latest as builder
+WORKDIR /fblog
+COPY . /fblog/
+RUN cargo build
+
+FROM debian:bullseye-slim
+COPY --from=builder /fblog/target/debug/fblog .

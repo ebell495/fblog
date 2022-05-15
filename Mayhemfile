@@ -1,0 +1,8 @@
+project: fblog
+target: fblog
+
+image: ghcr.io/ebell495/fblog:latest
+duration: 300
+
+cmds:
+    - cmd: ./fblog
